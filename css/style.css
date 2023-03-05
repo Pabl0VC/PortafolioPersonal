@@ -1,0 +1,465 @@
+@import url("https://fonts.cdnfonts.com/css/geomanist");
+body {
+  background-color: Gainsboro;
+  font-family: "Geomanist", sans-serif;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Estilos Generales */
+.textos {
+  font-weight: lighter;
+  font-size: medium;
+}
+
+/* ------- Portada ---------*/
+header {
+  height: 100vh;
+}
+
+#portada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-text {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.containerPortada {
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.console-container {
+  font-family: "Geomanist", sans-serif;
+  font-weight: 900;
+  font-size: 4em;
+  text-align: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: SlateGray;
+}
+
+.console-underscore {
+  display: inline-block;
+  position: relative;
+  top: -0.14em;
+  left: 10px;
+}
+
+/* BOTON */
+.button-48 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Geomanist", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1), background-color 100ms cubic-bezier(0.694, 0, 0.335, 1), color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-48:before {
+  animation: opacityFallbackOut 0.5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: Silver;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #FFFFFF;
+}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
+
+/* ------------ About ----------- */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+}
+
+/* Iconos Skills*/
+.iconSkills {
+  font-size: 60px;
+}
+
+.container-icon {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container .iconSkills {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+  animation: move 10s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+/* -------- Proyectos ------ */
+/* imagenes Proyectos*/
+.card {
+  /* box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.054);
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+  opacity: 1; */
+  background-color: #cfcfcf;
+  border: none;
+}
+
+/* .card:hover{
+  box-shadow:none;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+} */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(103, 103, 103, 0.622);
+  border-start-end-radius: 7px;
+  border-start-start-radius: 7px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+  opacity: 0;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.image-container:hover img {
+  filter: brightness(100%);
+}
+
+/* boton ver video */
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all 0.4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #c3c3c3;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #cfcfcf;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+/* videos */
+video {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.modal-content, .modal-body {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+}
+
+/* ----------- Contacto ----------*/
+#contacto {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Social Icons */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.iconosContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconosContacto ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.iconosContacto ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #404040;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+ul li a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(1),
+ul li a span:nth-child(3) {
+  width: 100%;
+  height: 3px;
+  background: #404040;
+}
+
+ul li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+
+ul li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+ul li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(2),
+ul li a span:nth-child(4) {
+  width: 3px;
+  height: 100%;
+  background: #404040;
+}
+
+ul li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+
+ul li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+
+ul li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.facebook:hover {
+  color: #0e76a8;
+}
+
+.facebook:hover span {
+  background: #0e76a8;
+}
+
+.twitter:hover {
+  color: #171515;
+}
+
+.twitter:hover span {
+  background: #171515;
+}
+
+.instagram:hover {
+  color: #dd4b39;
+}
+
+.instagram:hover span {
+  background: #dd4b39;
+}
+
+.google:hover {
+  color: #5865F2;
+}
+
+.google:hover span {
+  background: #5865F2;
+}
+
+ul li a .twitter {
+  color: #171515;
+}
+
+ul li a:hover:nth-child(3) {
+  color: #dd4b39;
+}
+
+ul li a:hover:nth-child(4) {
+  color: #5865F2;
+}
+
+/*# sourceMappingURL=style.css.map */
